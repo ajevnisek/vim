@@ -104,6 +104,7 @@ def main():
     recall = 0.95
 
     print('load features')
+    import ipdb; ipdb.set_trace()
     feature_id_train = mmcv.load(args.id_train_feature).squeeze()
     feature_id_val = mmcv.load(args.id_val_feature).squeeze()
     feature_oods = {name: mmcv.load(feat).squeeze() for name, feat in zip(ood_names, args.ood_features)}
